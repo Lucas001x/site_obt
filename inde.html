@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        /* #melhores_avaliados{
+            visibility: visible;
+        } */
+
+        #home{
+            margin: 1rem;
+        }
+
+        body{
+            background-color: #03A678;
+        }
+
+        .restaurant-card img {
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .restaurant-card {
+            margin-bottom: 20px;
+        }
+
+        .restaurant-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .rating {
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section id="melhores_avaliados">
+        <ul class="nav nav-pills nav-fill gap-2 p-1 small rounded-5 shadow-sm fixed-nav" id="pillNav2" role="tablist" style="background-color: #014040; --bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: #014040; --bs-nav-pills-link-active-bg: var(--bs-white);">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-bs-toggle="pill" href="#home" role="tab" aria-controls="home" aria-selected="true">Comida</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-bs-toggle="pill" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lazer</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-bs-toggle="pill" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Hospedagem</a>
+            </li>
+        </ul>
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" >
+            <h2 class="text-center">Melhores avaliados</h2>
+            <div class="row">
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtgUoBp0nYW1R4lbmcsYf-RaZ1Q-NDig3O6A&s" class="card-img-top" alt="La Chapa">
+                        <div class="card-body">
+                            <h5 class="card-title">La Chapa</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Cariacica, ES</p>
+                                <span class="rating">4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtgUoBp0nYW1R4lbmcsYf-RaZ1Q-NDig3O6A&s" class="card-img-top" alt="La Pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">La Pizza</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVlx3nG6bBOpCpyUS524n7_n-z9rbGUzOtg&s" class="card-img-top" alt="Casa Quente">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa Quente</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">3.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVlx3nG6bBOpCpyUS524n7_n-z9rbGUzOtg&s" class="card-img-top" alt="Lokos">
+                        <div class="card-body">
+                            <h5 class="card-title">Lokos</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">3.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVlx3nG6bBOpCpyUS524n7_n-z9rbGUzOtg&s" class="card-img-top" alt="Ice Gold">
+                        <div class="card-body">
+                            <h5 class="card-title">Ice Gold</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVlx3nG6bBOpCpyUS524n7_n-z9rbGUzOtg&s" class="card-img-top" alt="Sormania">
+                        <div class="card-body">
+                            <h5 class="card-title">Sormania</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVlx3nG6bBOpCpyUS524n7_n-z9rbGUzOtg&s" class="card-img-top" alt="Casa Lenha">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa Lenha</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">4.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVlx3nG6bBOpCpyUS524n7_n-z9rbGUzOtg&s" class="card-img-top" alt="Fogo quente">
+                        <div class="card-body">
+                            <h5 class="card-title">Fogo quente</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">4.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVlx3nG6bBOpCpyUS524n7_n-z9rbGUzOtg&s" class="card-img-top" alt="Ravenna">
+                        <div class="card-body">
+                            <h5 class="card-title">Ravenna</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Viana, ES</p>
+                                <span class="rating">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOVlx3nG6bBOpCpyUS524n7_n-z9rbGUzOtg&s" class="card-img-top" alt="Bronks">
+                        <div class="card-body">
+                            <h5 class="card-title">Bronks</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">4.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </section>
+</body>
+
+</html>

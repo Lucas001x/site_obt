@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locais Próximos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #04aa6d;
+      color: white;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+    }
+    .user-info img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+      background-color: #007b5e;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    .navbar a {
+      color: white;
+      text-align: center;
+      padding: 10px;
+      flex: 1;
+    }
+    .navbar a img {
+      width: 24px;
+      height: 24px;
+    }
+    .carousel-item {
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      background-color: white;
+      color: black;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 10px;
+      width: 18rem;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .rating {
+      color: #f1c40f;
+    }
+    .location {
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="user-info">
+      <img src="https://via.placeholder.com/40" alt="User Avatar">
+      <span>João</span>
+    </div>
+    <div class="notification-icon">
+      <img src="https://via.placeholder.com/24" alt="Notification Icon">
+    </div>
+  </div>
+  <h3>Locais próximos a você:</h3>
+  <h5>Melhores avaliados:</h5>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card">
+          <img src="image1.png" alt="Chez Remy">
+          <div class="card-body">
+            <h5 class="card-title">Chez Remy</h5>
+            <div>
+              <span class="rating">⭐ 4.7</span>
+              <span class="location">Vitória, ES</span>
+            </div>
+            <div>
+              <span class="badge badge-pill badge-success">+50</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="image2.png" alt="3 Irmãos">
+          <div class="card-body">
+            <h5 class="card-title">3 Irmãos</h5>
+            <div>
+              <span class="rating">⭐ 4.5</span>
+              <span class="location">Vila Velha, ES</span>
+            </div>
+            <div>
+              <span class="badge badge-pill badge-success">+40</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="image3.png" alt="Café Central">
+          <div class="card-body">
+            <h5 class="card-title">Café Central</h5>
+            <div>
+              <span class="rating">⭐ 4.6</span>
+              <span class="location">Vitória, ES</span>
+            </div>
+            <div>
+              <span class="badge badge-pill badge-success">+45</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="image4.png" alt="Bella Napoli">
+          <div class="card-body">
+            <h5 class="card-title">Bella Napoli</h5>
+            <div>
+              <span class="rating">⭐ 4.8</span>
+              <span class="location">Cariacica, ES</span>
+            </div>
+            <div>
+              <span class="badge badge-pill badge-success">+60</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="image5.png" alt="Bar do Zé">
+          <div class="card-body">
+            <h5 class="card-title">Bar do Zé</h5>
+            <div>
+              <span class="rating">⭐ 4.3</span>
+              <span class="location">Serra, ES</span>
+            </div>
+            <div>
+              <span class="badge badge-pill badge-success">+30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="image6.png" alt="Bistrô Maria">
+          <div class="card-body">
+            <h5 class="card-title">Bistrô Maria</h5>
+            <div>
+              <span class="rating">⭐ 4.9</span>
+              <span class="location">Vitória, ES</span>
+            </div>
+            <div>
+              <span class="badge badge-pill badge-success">+70</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<nav class="navbar">
+  <a href="#">
+    <img src="https://via.placeholder.com/24" alt="Início">
+    <span>Início</span>
+  </a>
+  <a href="#">
+    <img src="https://via.placeholder.com/24" alt="Mapa">
+    <span>Mapa</span>
+  </a>
+  <a href="#">
+    <img src="https://via.placeholder.com/24" alt="Buscar">
+    <span>Buscar</span>
+  </a>
+  <a href="#">
+    <img src="https://via.placeholder.com/24" alt="Perfil">
+    <span>Perfil</span>
+  </a>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
