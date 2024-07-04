@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iFood Style Home Screen</title>
+  <title>Inclurate</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
@@ -14,12 +14,27 @@
       background-color: #007F56;
     }
     .profile-pic {
-      width: 44px;
-      height: 44px;
+      width: 2.75rem;
+      height: 2.75rem;
       border-radius: 50%;
     }
+
+    .bnt_user{
+      border-radius: 0.875rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .nome{
+      color: #000000;
+      font-size: 1.25rem;
+      padding: 0.5rem;
+    }
+
+
     .locations-section .card {
-      background-color: #028090;
+      background-color: #007F56;
       border: none;
       border-radius: 15px;
     }
@@ -31,16 +46,22 @@
     }
     .navbar {
       background-color: #007F56;
+      border-radius: 3.75rem 3.75rem 0 0;
     }
     .nav-icon {
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.25rem;
     }
+
     .nav-link {
       color: black;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
     .nav-link:hover {
-      color: #FFD700;
+      color: #ffffff;
     }
 
     .carouselTopRated{
@@ -58,9 +79,14 @@
   <div class="container-fluid p-0">
     <!-- Profile and Header -->
     <div class="header d-flex justify-content-between align-items-center p-3">
-      <img src="profile.png" alt="Profile Picture" class="profile-pic">
+      <div >
+        <a href="" class="bnt_user bg-light">
+          <img src="user-icon.png" alt="Profile Picture" class="profile-pic">
+          <h4 class="nome">João</h4>
+        </a>
+      </div>
       <h4>Locais próximos a você:</h4>
-      <button class="btn btn-light">João</button>
+      <div></div>
 
     </div>
 
@@ -155,9 +181,9 @@
   </div>
 
   <!-- Bottom Navigation Bar -->
-  <nav class="navbar fixed-bottom navbar-light bg-light">
-    <div class="container-fluid d-flex justify-content-around">
-      <a class="nav-link" href="#"><img src="home-icon.png" alt="Home" class="nav-icon">Home</a>
+  <nav class="navbar fixed-bottom navbar-light">
+    <div class="container-fluid d-flex justify-content-around ">
+      <a class="nav-link " href="#"><img src="home-icon.png" alt="Home" class="nav-icon">Home</a>
       <a class="nav-link" href="#"><img src="map-icon.png" alt="Map" class="nav-icon">Mapa</a>
       <a class="nav-link" href="pesquisar.html"><img src="search-icon.png" alt="Search" class="nav-icon">Pesquisar</a>
       <a class="nav-link" href="#"><img src="user-icon.png" alt="User" class="nav-icon">Usuario</a>
