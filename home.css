@@ -1,0 +1,97 @@
+body {
+    background-color: #014040; /* Cor de fundo da página */
+    color: #f0ffff; /* Cor do texto */
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+  .header {
+    background-color: #03A678; /* Cor do header */
+  }
+  
+  .profile-pic {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+  }
+  
+  .bnt_user {
+    border-radius: 0.875rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nome {
+    color: #f0ffff;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+  }
+  
+  .locations-section .card {
+    background-color: #2b134b; /* Cor do fundo dos cards */
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .locations-section .card-title {
+    color: #77ffc0; /* Cor do título dos cards */
+  }
+  
+  .locations-section .card-text {
+    color: #D8F3DC; /* Cor do texto dos cards */
+  }
+  
+  .navbar {
+    background-color: #007F56; /* Cor do navbar */
+    border-radius: 3.75rem 3.75rem 0 0;
+  }
+  
+  .nav-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+  }
+  
+  .nav-link {
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nav-link:hover {
+    color: #00ff88;
+  }
+  
+  .carouselTopRated {
+    padding: 1rem;
+  }
+  
+  .card img {
+    object-fit: cover;
+    height: 9.375rem;
+  }
+  
+  .container-corpo {
+    padding-bottom: 5rem;
+  }
+  
+  @media (max-width: 767px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header h4 {
+      margin-top: 10px;
+    }
+  
+    .navbar .nav-link {
+      padding: 0.5rem;
+    }
+  
+    .navbar .nav-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }  
