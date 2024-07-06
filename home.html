@@ -3,203 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inclurate</title>
+  <title>IncluRate</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #00A896;
-      color: white;
-    }
-    .header {
-      background-color: #007F56;
-    }
-    .profile-pic {
-      width: 2.75rem;
-      height: 2.75rem;
-      border-radius: 50%;
-    }
-
-    .bnt_user{
-      border-radius: 0.875rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-
-    .nome{
-      color: #000000;
-      font-size: 1.25rem;
-      padding: 0.5rem;
-    }
-
-
-    .locations-section .card {
-      background-color: #007F56;
-      border: none;
-      border-radius: 15px;
-    }
-    .locations-section .card-title {
-      color: white;
-    }
-    .locations-section .card-text {
-      color: #D8F3DC;
-    }
-
-    .navbar {
-      background-color: #007F56;
-      border-radius: 3.75rem 3.75rem 0 0;
-    }
-
-    .nav-icon {
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-right: 0.25rem;
-    }
-
-    .nav-link {
-      color: black;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-
-    .nav-link:hover {
-      color: #ffffff;
-    }
-
-    .carouselTopRated{
-      padding: 1rem;
-    }
-
-    .card img {
-      object-fit: cover;
-      height: 9.375rem;
-    }
-
-    .container-corpo{
-      padding-bottom: 5rem;
-    }
-
-  </style>
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <div class="container-corpo p-0">
-    <!-- Profile and Header -->
-    <div class="header d-flex justify-content-between align-items-center p-3">
-      <div >
-        <a href="" class="bnt_user bg-light">
-          <img src="imgs/user-icon.png" alt="Profile Picture" class="profile-pic">
-          <h4 class="nome">João</h4>
-        </a>
-      </div>
-      <h4>Locais próximos a você:</h4>
-      <div></div>
-
+  <header class="header d-flex justify-content-between align-items-center p-3">
+    <div>
+      <a href="" class="bnt_user bg-light d-flex align-items-center">
+        <img src="imgs/user-icon.png" alt="Profile Picture" class="profile-pic">
+        <h4 class="nome">João</h4>
+      </a>
     </div>
+    <h4>Locais próximos a você:</h4>
+    <div></div>
+  </header>
 
-    <!-- Top Rated Locations -->
-    <div class="locations-section p-3">
-      <h5>Melhores avaliados:</h5>
-      <div id="carouselTopRated" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-12 col-md-6 mb-3">
-                <div class="card">
-                  <img src="imgs/RESTAURANTE1.png" class="card-img-top" alt="Restaurant 1">
-                  <div class="card-body">
-                    <h5 class="card-title">Chez Remy</h5>
-                    <p class="card-text">Vitória, ES</p>
-                    <p class="card-text">4.7 <span>&#9733;</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 mb-3">
-                <div class="card">
-                  <img src="imgs/restaurante2.jpg" class="card-img-top" alt="Restaurant 2">
-                  <div class="card-body">
-                    <h5 class="card-title">3 Irmãos</h5>
-                    <p class="card-text">Vila Velha, ES</p>
-                    <p class="card-text">4.5 <span>&#9733;</span></p>
-                  </div>
+  <div class="locations-section p-3">
+    <h5>Melhores avaliados:</h5>
+    <div id="carouselTopRated" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-12 col-md-6 mb-3">
+              <div class="card">
+                <img src="imgs/RESTAURANTE1.png" class="card-img-top" alt="Restaurant 1">
+                <div class="card-body">
+                  <h5 class="card-title">Chez Remy</h5>
+                  <p class="card-text">Vitória, ES</p>
+                  <p class="card-text">4.7 <span>&#9733;</span></p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-12 col-md-6 mb-3">
-                <div class="card">
-                  <img src="imgs/restaurante3.jpg" class="card-img-top" alt="Restaurant 3">
-                  <div class="card-body">
-                    <h5 class="card-title">Bella Itália</h5>
-                    <p class="card-text">Serra, ES</p>
-                    <p class="card-text">4.6 <span>&#9733;</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 mb-3">
-                <div class="card">
-                  <img src="imgs/restaurante4.jpg" class="card-img-top" alt="Restaurant 4">
-                  <div class="card-body">
-                    <h5 class="card-title">Sushi Master</h5>
-                    <p class="card-text">Cariacica, ES</p>
-                    <p class="card-text">4.8 <span>&#9733;</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-12 col-md-6 mb-3">
-                <div class="card">
-                  <img src="imgs/restaurante5.jpg" class="card-img-top" alt="Restaurant 5">
-                  <div class="card-body">
-                    <h5 class="card-title">Pizza da Mama</h5>
-                    <p class="card-text">Vitória, ES</p>
-                    <p class="card-text">4.9 <span>&#9733;</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 mb-3">
-                <div class="card">
-                  <img src="imgs/restaurante6.jpg" class="card-img-top" alt="Restaurant 6">
-                  <div class="card-body">
-                    <h5 class="card-title">Churrasquinho do Zé</h5>
-                    <p class="card-text">Vila Velha, ES</p>
-                    <p class="card-text">4.4 <span>&#9733;</span></p>
-                  </div>
+            <div class="col-12 col-md-6 mb-3">
+              <div class="card">
+                <img src="imgs/restaurante2.jpg" class="card-img-top" alt="Restaurant 2">
+                <div class="card-body">
+                  <h5 class="card-title">3 Irmãos</h5>
+                  <p class="card-text">Vila Velha, ES</p>
+                  <p class="card-text">4.5 <span>&#9733;</span></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselTopRated" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselTopRated" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-12 col-md-6 mb-3">
+              <div class="card">
+                <img src="imgs/restaurante3.jpg" class="card-img-top" alt="Restaurant 3">
+                <div class="card-body">
+                  <h5 class="card-title">Bella Itália</h5>
+                  <p class="card-text">Serra, ES</p>
+                  <p class="card-text">4.6 <span>&#9733;</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <div class="card">
+                <img src="imgs/restaurante4.jpg" class="card-img-top" alt="Restaurant 4">
+                <div class="card-body">
+                  <h5 class="card-title">Sushi Master</h5>
+                  <p class="card-text">Cariacica, ES</p>
+                  <p class="card-text">4.8 <span>&#9733;</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-12 col-md-6 mb-3">
+              <div class="card">
+                <img src="imgs/restaurante5.jpg" class="card-img-top" alt="Restaurant 5">
+                <div class="card-body">
+                  <h5 class="card-title">Pizza da Mama</h5>
+                  <p class="card-text">Vitória, ES</p>
+                  <p class="card-text">4.9 <span>&#9733;</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <div class="card">
+                <img src="imgs/restaurante6.jpg" class="card-img-top" alt="Restaurant 6">
+                <div class="card-body">
+                  <h5 class="card-title">Churrasquinho do Zé</h5>
+                  <p class="card-text">Vila Velha, ES</p>
+                  <p class="card-text">4.4 <span>&#9733;</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselTopRated" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselTopRated" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 
   <!-- Bottom Navigation Bar -->
   <nav class="navbar fixed-bottom navbar-light">
-    <div class="container-fluid d-flex justify-content-around ">
-      <a class="nav-link " href="#"><img src="imgs/home-icon.png" alt="Home" class="nav-icon">Home</a>
+    <div class="container-fluid d-flex justify-content-around">
+      <a class="nav-link" href="#"><img src="imgs/home-icon.png" alt="Home" class="nav-icon">Home</a>
       <a class="nav-link" href="#"><img src="imgs/map-icon.png" alt="Map" class="nav-icon">Mapa</a>
       <a class="nav-link" href="pesquisar.html"><img src="imgs/search-icon.png" alt="Search" class="nav-icon">Pesquisar</a>
-      <a class="nav-link" href="#"><img src="imgs/user-icon.png" alt="User" class="nav-icon">Usuario</a>
+      <a class="nav-link" href="#"><img src="imgs/user-icon.png" alt="User" class="nav-icon">Usuário</a>
     </div>
   </nav>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>
