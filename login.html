@@ -25,7 +25,7 @@
           <input type="password" name="password" placeholder="Senha">
         </div>
         <div class="bnts">
-          <a href="home.html"><button class="btn-login">Login</button></a>
+          <button class="btn-login" onclick="login()">Login</button>
           <button class="btn-login" onclick="showSignup()">Sign up</button>
         </div>
       </div>
@@ -55,6 +55,10 @@
   </div>
 
   <script>
+    function login() {
+      window.location.href = 'home.html';
+    }
+
     function showSignup() {
       document.querySelector('.main-login').style.display = 'none';
       document.querySelector('.main-signup').style.display = 'flex';
