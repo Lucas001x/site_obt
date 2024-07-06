@@ -24,9 +24,46 @@
           <label for="password">Senha</label>
           <input type="password" name="password" placeholder="Senha">
         </div>
-        <a href="home.html"><button class="btn-login">Login</button></a>
+        <div class="bnts">
+          <button class="btn-login">Login</button>
+          <button class="btn-login" onclick="showSignup()">Sign up</button>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="main-signup">
+    <div class="card-signup">
+      <h1>SIGN UP</h1>
+      <div class="textfield-signup">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" placeholder="Nome">
+      </div>
+      <div class="textfield-signup">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email">
+      </div>
+      <div class="textfield-signup">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" placeholder="Senha">
+      </div>
+      <div class="bnts">
+        <button class="btn-signup">Registrar</button>
+        <button class="btn-signup" onclick="showLogin()">Voltar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSignup() {
+      document.querySelector('.main-login').style.display = 'none';
+      document.querySelector('.main-signup').style.display = 'flex';
+    }
+
+    function showLogin() {
+      document.querySelector('.main-signup').style.display = 'none';
+      document.querySelector('.main-login').style.display = 'flex';
+    }
+  </script>
 </body>
 </html>
