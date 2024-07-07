@@ -56,28 +56,44 @@ body {
 
 .restaurant-info {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-top: auto;
 }
 
 .rating {
-    font-weight: bold;
-    color: #D8F3DC;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.rating span {
+    margin-left: 0.2rem;
 }
 
 .card {
     background-color: #49405f;
     color: #ffffff;
-    border: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
 }
 
+
 .card-title {
-    font-size: 1.25rem;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .card-text {
