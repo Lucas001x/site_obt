@@ -1,0 +1,179 @@
+body {
+    background-color: #2f2841;
+    color: #f0ffff; 
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-container {
+    margin: 1rem auto;
+    max-width: 500px;
+    color: #ffffff;
+    z-index: 1000; /* Faz com que a search bar fique acima do conteúdo */
+}
+
+.search-container .form-control {
+    background-color: #201b2c;
+    color: #ffffff;
+    border: 1px solid #49405f;
+}
+
+.search-container .form-control::placeholder {
+    color: #ffffffb6;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 3.5rem; /* Ajuste para que fique logo abaixo da search bar */
+    width: 100%;
+    background-color: #201b2c;
+    z-index: 1000; /* Garante que o menu não se sobreponha ao conteúdo */
+}
+
+.tab-content {
+    overflow: hidden;
+}
+
+.tab-pane {
+    padding-bottom: 5rem;
+}
+
+.restaurant-card img {
+    height: 9.375rem;
+    object-fit: cover;
+}
+
+.restaurant-card {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.restaurant-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Faz com que o rating fique sempre na parte inferior do card */
+}
+
+.rating {
+    font-weight: bold;
+    color: #D8F3DC;
+}
+
+.card {
+    background-color: #49405f;
+    color: #ffffff;
+    border: none; /* Remove a borda padrão do card */
+    height: 100%; /* Garante que o card ocupe toda a altura disponível */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Ajuste o tamanho do título para evitar que ocupe muito espaço */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona reticências (...) para textos muito longos */
+    white-space: nowrap;
+}
+
+.card-text {
+    color: #D8F3DC;
+}
+
+.navbar {
+    background-color: #201b2c;
+    border-radius: 3.75rem 3.75rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    z-index: 1000; /* Garante que a barra de navegação fique acima do conteúdo */
+}
+
+.nav-icon {
+    width: 2rem; 
+    height: 2rem; 
+    margin-bottom: 0.25rem; 
+}
+
+.nav-link {
+    color: #77ffc0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 0;
+    flex-grow: 1;
+}
+
+.nav-link:hover {
+    color: #77ffc0;
+}
+
+.fixed-bottom .container-fluid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 0;
+}
+
+.navbar .nav-icon {
+    width: 2rem; 
+    height: 2rem; 
+}
+
+.navbar .nav-link div {
+    font-size: 0.875rem;
+}
+
+.nav-link div {
+    font-size: 0.875rem;
+}
+
+@media (max-width: 767px) {
+  .navbar .nav-link {
+    padding: 0.5rem;
+  }
+
+  .navbar .nav-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .navbar {
+    border-radius: 2rem 2rem 0 0;
+    padding: 0 1rem;
+  }
+
+  .nav-link div {
+    font-size: 0.875rem;
+  }
+}
+
+main {
+    margin-top: 7rem; /* Deixa espaço suficiente para a search bar e o menu */
+    padding: 1rem;
+    flex: 1;
+}
+
+#searchInput {
+    border-radius: 20px; /* Bordas arredondadas para a barra de pesquisa */
+    padding-left: 2rem; /* Adiciona um pouco de padding no lado esquerdo para o ícone */
+    border: 1px solid #49405f; /* Adiciona uma borda ao redor da barra de pesquisa */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+}
+
+#searchInput:focus {
+    border-color: #77ffc0; /* Cor da borda ao focar na barra de pesquisa */
+    box-shadow: 0 0 0 0.2rem rgba(119, 252, 192, 0.5); /* Sombra mais destacada ao focar */
+    outline: none; /* Remove o contorno padrão ao focar */
+}
