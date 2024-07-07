@@ -2,7 +2,11 @@ body {
   background-color: #2f2841;
   color: #f0ffff; 
   font-family: 'Noto Sans', sans-serif;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -14,19 +18,14 @@ body {
   background-color: #3c2d48;
   padding: 0.5rem;
   border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
 }
 
 .profile-pic {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-}
-
-.bnt_user {
-  border-radius: 0.875rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .nome {
@@ -45,6 +44,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  overflow-y: auto;
+  flex-grow: 1;
 }
 
 .locations-section h5 {
@@ -62,6 +63,11 @@ body {
   border: none;
   border-radius: 15px;
   margin-bottom: 1rem; 
+  transition: transform 0.5s ease-in-out;
+}
+
+.locations-section .card:hover {
+  transform: scale(1.05);
 }
 
 .locations-section .card-title {
@@ -75,11 +81,16 @@ body {
 .card img {
   object-fit: cover;
   height: 9.375rem; 
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .navbar {
   background-color: #201b2c;
   border-radius: 3.75rem 3.75rem 0 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
 }
 
 .nav-icon {
@@ -95,6 +106,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 0.75rem 0;
+  flex-grow: 1;
 }
 
 .nav-link:hover {
@@ -127,11 +139,20 @@ body {
   }
 
   .navbar .nav-link {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .navbar .nav-icon {
     width: 1.8rem;
     height: 1.8rem;
+  }
+
+  .navbar {
+    border-radius: 2rem 2rem 0 0;
+    padding: 0 1rem;
+  }
+
+  .nav-link div {
+    font-size: 0.875rem;
   }
 }
