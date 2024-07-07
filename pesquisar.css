@@ -13,7 +13,7 @@ body {
     margin: 1rem auto;
     max-width: 500px;
     color: #ffffff;
-    z-index: 1000; /* Faz com que a search bar fique acima do conteúdo */
+    z-index: 1000;
 }
 
 .search-container .form-control {
@@ -28,10 +28,10 @@ body {
 
 .fixed-nav {
     position: fixed;
-    top: 3.5rem; /* Ajuste para que fique logo abaixo da search bar */
+    top: 3.5rem;
     width: 100%;
     background-color: #201b2c;
-    z-index: 1000; /* Garante que o menu não se sobreponha ao conteúdo */
+    z-index: 1000;
 }
 
 .tab-content {
@@ -58,7 +58,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto; /* Faz com que o rating fique sempre na parte inferior do card */
+    margin-top: auto;
 }
 
 .rating {
@@ -69,14 +69,14 @@ body {
 .card {
     background-color: #49405f;
     color: #ffffff;
-    border: none; /* Remove a borda padrão do card */
-    height: 100%; /* Garante que o card ocupe toda a altura disponível */
+    border: none;
+    height: 100%;
 }
 
 .card-title {
-    font-size: 1.25rem; /* Ajuste o tamanho do título para evitar que ocupe muito espaço */
+    font-size: 1.25rem;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona reticências (...) para textos muito longos */
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
@@ -90,7 +90,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 0.5rem 0;
-    z-index: 1000; /* Garante que a barra de navegação fique acima do conteúdo */
+    z-index: 1000;
 }
 
 .nav-icon {
@@ -107,6 +107,7 @@ body {
     text-align: center;
     padding: 0.75rem 0;
     flex-grow: 1;
+    font-weight: bold;
 }
 
 .nav-link:hover {
@@ -160,20 +161,20 @@ body {
 }
 
 main {
-    margin-top: 7rem; /* Deixa espaço suficiente para a search bar e o menu */
+    margin-top: 7rem;
     padding: 1rem;
     flex: 1;
 }
 
 #searchInput {
-    border-radius: 20px; /* Bordas arredondadas para a barra de pesquisa */
-    padding-left: 2rem; /* Adiciona um pouco de padding no lado esquerdo para o ícone */
-    border: 1px solid #49405f; /* Adiciona uma borda ao redor da barra de pesquisa */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    border-radius: 20px; 
+    padding-left: 2rem;
+    border: 1px solid #49405f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 #searchInput:focus {
-    border-color: #77ffc0; /* Cor da borda ao focar na barra de pesquisa */
-    box-shadow: 0 0 0 0.2rem rgba(119, 252, 192, 0.5); /* Sombra mais destacada ao focar */
-    outline: none; /* Remove o contorno padrão ao focar */
+    border-color: #77ffc0;
+    box-shadow: 0 0 0 0.2rem rgba(119, 252, 192, 0.5);
+    outline: none;
 }
