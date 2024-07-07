@@ -33,7 +33,6 @@ function signup() {
     }
   
     if (isValid) {
-      alert('Cadastro realizado com sucesso!');
       window.location.href = 'login.html';
     }
   }  
