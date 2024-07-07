@@ -1,97 +1,137 @@
 body {
-    background-color: #014040; /* Cor de fundo da página */
-    color: #f0ffff; /* Cor do texto */
-    font-family: 'Noto Sans', sans-serif;
-  }
-  
+  background-color: #2f2841;
+  color: #f0ffff; 
+  font-family: 'Noto Sans', sans-serif;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #201b2c;
+  padding: 0.75rem;
+}
+
+.profile-bg {
+  background-color: #3c2d48;
+  padding: 0.5rem;
+  border-radius: 0.875rem;
+}
+
+.profile-pic {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+}
+
+.bnt_user {
+  border-radius: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nome {
+  color: #77ffc0;
+  font-size: 1.25rem;
+  padding-left: 0.5rem;
+}
+
+.header h4 {
+  color: #77ffc0;
+  font-size: 1.25rem;
+}
+
+.locations-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.locations-section h5 {
+  color: #77ffc0;
+  font-weight: bold; 
+  margin-bottom: 1rem;
+}
+
+.locations-section .carousel-inner {
+  margin-top: 1rem; 
+}
+
+.locations-section .card {
+  background-color: #49405f; 
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 1rem; 
+}
+
+.locations-section .card-title {
+  color: #ffffff; 
+}
+
+.locations-section .card-text {
+  color: #D8F3DC; 
+}
+
+.card img {
+  object-fit: cover;
+  height: 9.375rem; 
+}
+
+.navbar {
+  background-color: #201b2c;
+  border-radius: 3.75rem 3.75rem 0 0;
+}
+
+.nav-icon {
+  width: 2rem; 
+  height: 2rem; 
+  margin-bottom: 0.25rem; 
+}
+
+.nav-link {
+  color: #77ffc0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.75rem 0;
+}
+
+.nav-link:hover {
+  color: #77ffc0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(1); 
+}
+
+.container-corpo {
+  padding-bottom: 5rem;
+}
+
+.nav-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
   .header {
-    background-color: #03A678; /* Cor do header */
-  }
-  
-  .profile-pic {
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-  }
-  
-  .bnt_user {
-    border-radius: 0.875rem;
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
-  
-  .nome {
-    color: #f0ffff;
-    font-size: 1.25rem;
-    padding: 0.5rem;
+
+  .header h4 {
+    margin-top: 10px;
   }
-  
-  .locations-section .card {
-    background-color: #2b134b; /* Cor do fundo dos cards */
-    border: none;
-    border-radius: 15px;
+
+  .navbar .nav-link {
+    padding: 0.75rem;
   }
-  
-  .locations-section .card-title {
-    color: #77ffc0; /* Cor do título dos cards */
+
+  .navbar .nav-icon {
+    width: 1.8rem;
+    height: 1.8rem;
   }
-  
-  .locations-section .card-text {
-    color: #D8F3DC; /* Cor do texto dos cards */
-  }
-  
-  .navbar {
-    background-color: #007F56; /* Cor do navbar */
-    border-radius: 3.75rem 3.75rem 0 0;
-  }
-  
-  .nav-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 0.25rem;
-  }
-  
-  .nav-link {
-    color: #f0f0f0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .nav-link:hover {
-    color: #00ff88;
-  }
-  
-  .carouselTopRated {
-    padding: 1rem;
-  }
-  
-  .card img {
-    object-fit: cover;
-    height: 9.375rem;
-  }
-  
-  .container-corpo {
-    padding-bottom: 5rem;
-  }
-  
-  @media (max-width: 767px) {
-    .header {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .header h4 {
-      margin-top: 10px;
-    }
-  
-    .navbar .nav-link {
-      padding: 0.5rem;
-    }
-  
-    .navbar .nav-icon {
-      width: 1.2rem;
-      height: 1.2rem;
-    }
-  }  
+}
