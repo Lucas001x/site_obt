@@ -19,7 +19,6 @@ function login() {
   }
 
   if (isValid) {
-    alert('Login realizado com sucesso!');
     window.location.href = 'home.html';
   }
 }
