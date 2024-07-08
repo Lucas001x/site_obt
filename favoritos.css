@@ -1,114 +1,194 @@
 body {
-    background-color: #2f2841;
-    color: #fff;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background-color: #201b2c;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  header .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header .profile-bg {
-    display: flex;
-    align-items: center;
-  }
-  
-  header .profile-pic {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-  }
-  
-  header .nome {
-    color: #fff;
-    margin-left: 10px;
-  }
-  
-  .locations-section {
-    background-color: #49405f;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-  }
-  
-  h5 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  .navbar {
-    background-color: #201b2c;
-    border-radius: 3.75rem 3.75rem 0 0;
-    display: flex;
-    justify-content: space-around;
-    padding: 0.5rem 0;
-  }
-  
-  .nav-icon {
-    width: 2rem;
-    height: 2rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .nav-link {
-    color: #77ffc0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0.75rem 0;
-    flex-grow: 1;
-    font-weight: bold;
-  }
-  
-  .nav-link:hover {
-    color: #77ffc0;
-  }
-  
-  .navbar .nav-icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .navbar .nav-link div {
-    font-size: 12px;
-  }
-  
-  @media (max-width: 767px) {
-    .navbar .nav-link {
+  background-color: #2f2841;
+  color: #f0ffff;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #201b2c;
+  color: #77ffc0;
+}
+
+.profile-bg {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nome {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.locations-section {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 3.75rem;
+}
+
+h2 {
+  color: #fff;
+}
+
+.navbar {
+  background-color: #201b2c;
+  border-radius: 3.75rem 3.75rem 0 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+.nav-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.nav-link {
+  color: #77ffc0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.75rem 0;
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #77ffc0;
+}
+
+.fixed-bottom .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.75rem 0;
+}
+
+.navbar .nav-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.navbar .nav-link div {
+  font-size: 0.875rem;
+}
+
+.nav-link div {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 767px) {
+  .navbar .nav-link {
       padding: 0.5rem;
-    }
-  
-    .navbar .nav-icon {
+  }
+
+  .navbar .nav-icon {
       width: 1.8rem;
       height: 1.8rem;
-    }
-  
-    .navbar {
+  }
+
+  .navbar {
       border-radius: 2rem 2rem 0 0;
       padding: 0 1rem;
-    }
-  
-    .navbar .nav-link div {
-      font-size: 0.875rem;
-    }
   }
-  
+
+  .nav-link div {
+      font-size: 0.875rem;
+  }
+}
+
+.restaurant-card {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; 
+}
+
+.restaurant-card .card {
+  background-color: #49405f;
+  border: none;
+  color: #fff;
+}
+
+.restaurant-card img {
+  height: 9.375rem;
+  object-fit: cover;
+}
+
+.restaurant-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-text {
+  color: #D8F3DC;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.favorite-icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.favorite-icon[data-favorite="true"] img {
+  content: url('imgs/redheart.png'); 
+}
+
+.favorite-icon[data-favorite="false"] img {
+  content: url('imgs/blankheart.png');
+}
+
+.favorite-icon.pulse {
+  transform: scale(1.3);
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.6;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}

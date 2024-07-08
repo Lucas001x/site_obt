@@ -1,52 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Favoritos</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="favoritos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="favoritos.css">
 </head>
 <body>
-  <header class="header d-flex justify-content-between align-items-center p-3">
-    <a class="nav-link" href="usuario.html">
-      <div class="profile-bg">
-        <img src="imgs/user-icon.png" alt="Profile Picture" class="profile-pic">
-        <h4 class="nome">João</h4>
-      </div>
-    </a>
-    <div></div>
-  </header>
+    <header class="header d-flex justify-content-between align-items-center p-3">
+        <a class="nav-link" href="usuario.html">
+            <div class="profile-bg">
+                <img src="imgs/user-icon.png" alt="Profile Picture" class="profile-pic">
+                <h4 class="nome">João</h4>
+            </div>
+        </a>
+        <div></div>
+    </header>
 
-  <div class="locations-section p-3">
-    <h5>Favoritos</h5>
-    <p>Listagem dos restaurantes favoritos aqui.</p>
-  </div>
+    <main class="locations-section p-3">
+        <div class="container">
+            <h2 class="text-center mb-4">Favoritos</h2>
+            <div class="row">
+                <!-- Favoritos -->
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant1" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/LaChapa.png" class="card-img-top" alt="La Chapa">
+                        <div class="card-body">
+                            <h5 class="card-title">La Chapa</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Cariacica, ES</p>
+                                <span class="rating">4.7 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant2" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/LaPizza.png" class="card-img-top" alt="La Pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">La Pizza</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">5.0 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant3" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/CasaQuente.png" class="card-img-top" alt="Casa Quente">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa Quente</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">3.0 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant4" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/Lokos.png" class="card-img-top" alt="Lokos">
+                        <div class="card-body">
+                            <h5 class="card-title">Lokos</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">3.4 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant5" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/IceGold.png" class="card-img-top" alt="Ice Gold">
+                        <div class="card-body">
+                            <h5 class="card-title">Ice Gold</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">4.9 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant6" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/Sormania.png" class="card-img-top" alt="Sormania">
+                        <div class="card-body">
+                            <h5 class="card-title">Sormania</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">5.0 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant7" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/CasaLenha.png" class="card-img-top" alt="Casa Lenha">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa Lenha</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">4.0 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant8" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/FogoQuente.png" class="card-img-top" alt="Fogo Quente">
+                        <div class="card-body">
+                            <h5 class="card-title">Fogo Quente</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Vitória, ES</p>
+                                <span class="rating">4.0 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant9" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/Ravenna.png" class="card-img-top" alt="Ravenna">
+                        <div class="card-body">
+                            <h5 class="card-title">Ravenna</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Viana, ES</p>
+                                <span class="rating">4.5 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 restaurant-card">
+                    <div class="card">
+                        <div class="favorite-icon" data-favorite="true" data-restaurant-id="restaurant10" onclick="toggleFavorite(this)">
+                            <img src="imgs/redheart.png" alt="Favorite" class="heart-icon">
+                        </div>
+                        <img src="imgs/Bronks.png" class="card-img-top" alt="Bronks">
+                        <div class="card-body">
+                            <h5 class="card-title">Bronks</h5>
+                            <div class="restaurant-info">
+                                <p class="card-text">Viana, ES</p>
+                                <span class="rating">3.8 <span>&#9733;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-  <nav class="navbar fixed-bottom navbar-light">
-    <div class="container-fluid d-flex justify-content-around">
-      <a class="nav-link" href="home.html">
-        <img src="imgs/home-icon.png" alt="Home" class="nav-icon">
-        <div>Home</div>
-      </a>
-      <a class="nav-link" href="#">
-        <img src="imgs/map-icon.png" alt="Map" class="nav-icon">
-        <div>Mapa</div>
-      </a>
-      <a class="nav-link" href="pesquisar.html">
-        <img src="imgs/search-icon.png" alt="Search" class="nav-icon">
-        <div>Pesquisar</div>
-      </a>
-      <a class="nav-link" href="usuario.html">
-        <img src="imgs/user-icon.png" alt="User" class="nav-icon">
-        <div>Usuário</div>
-      </a>
-    </div>
-  </nav>
+    <nav class="navbar fixed-bottom navbar-light">
+        <div class="container-fluid d-flex justify-content-around">
+            <a class="nav-link" href="home.html">
+                <img src="imgs/home-icon.png" alt="Home" class="nav-icon">
+                <div>Home</div>
+            </a>
+            <a class="nav-link" href="#">
+                <img src="imgs/map-icon.png" alt="Map" class="nav-icon">
+                <div>Mapa</div>
+            </a>
+            <a class="nav-link active" href="pesquisar.html">
+                <img src="imgs/search-icon.png" alt="Search" class="nav-icon">
+                <div>Pesquisar</div>
+            </a>
+            <a class="nav-link" href="usuario.html">
+                <img src="imgs/user-icon.png" alt="User" class="nav-icon">
+                <div>Usuário</div>
+            </a>
+        </div>
+    </nav>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="favoritos.js"></script>
+    <script src="favoritos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
