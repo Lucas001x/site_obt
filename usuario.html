@@ -1,334 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Usuário</title>
+    <link rel="stylesheet" href="usuario.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Noto Sans', sans-serif;
-            background-color: #201b2c;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            background-color: #201b2c;
-            padding: 20px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .header .back-button,
-        .header .edit-button {
-            background-color: #fff;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile, .edit-profile {
-            text-align: center;
-        }
-
-        .profile img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid #fff;
-        }
-
-        .profile h1, .edit-profile h1 {
-            font-size: 24px;
-            margin: 10px 0 5px 0;
-        }
-
-        .profile p, .edit-profile p {
-            color: #ddd;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 10px 0;
-            color: #000;
-            margin: 20px 0;
-        }
-
-        .stats div {
-            text-align: center;
-        }
-
-        .stats div p:first-child {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .menu {
-            background-color: #fff;
-            border-radius: 10px;
-            color: #000;
-        }
-
-        .menu-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-        }
-
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-
-        .menu-item img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-
-        .menu-item p {
-            flex-grow: 1;
-        }
-
-        .menu-item i {
-            font-size: 18px;
-            color: #aaa;
-        }
-
-        .edit-profile input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            background-color: #514869;
-            color: #fff;
-        }
-
-        .edit-profile button {
-            padding: 10px 20px;
-            background-color: #77ffc0;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        @media (min-width: 600px) {
-            .container {
-                max-width: 500px;
-            }
-
-            .profile img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .profile h1, .edit-profile h1 {
-                font-size: 28px;
-            }
-
-            .stats div p:first-child {
-                font-size: 18px;
-            }
-
-            .stats div p:last-child {
-                font-size: 20px;
-            }
-
-            .menu-item img {
-                width: 30px;
-                height: 30px;
-            }
-
-            .menu-item p {
-                font-size: 18px;
-            }
-
-            .menu-item i {
-                font-size: 22px;
-            }
-
-            .edit-profile input {
-                font-size: 18px;
-                padding: 12px;
-            }
-
-            .edit-profile button {
-                font-size: 18px;
-                padding: 12px 24px;
-            }
-        }
-
-        @media (min-width: 900px) {
-            .container {
-                max-width: 700px;
-            }
-
-            .profile img {
-                width: 200px;
-                height: 200px;
-            }
-
-            .profile h1, .edit-profile h1 {
-                font-size: 32px;
-            }
-
-            .stats div p:first-child {
-                font-size: 20px;
-            }
-
-            .stats div p:last-child {
-                font-size: 24px;
-            }
-
-            .menu-item img {
-                width: 36px;
-                height: 36px;
-            }
-
-            .menu-item p {
-                font-size: 20px;
-            }
-
-            .menu-item i {
-                font-size: 24px;
-            }
-
-            .edit-profile input {
-                font-size: 20px;
-                padding: 14px;
-            }
-
-            .edit-profile button {
-                font-size: 20px;
-                padding: 14px 28px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <div id="profile-view" class="profile-view">
             <div class="header">
-                <button class="back-button" onclick="toggleView('profile-view', 'edit-profile-view')">
+                <button class="back-button" onclick="goBack()">
                     <img src="https://img.icons8.com/material-rounded/24/000000/left.png" alt="Back">
                 </button>
                 <h2>Perfil</h2>
-                <button class="edit-button" onclick="toggleView('edit-profile-view', 'profile-view')">
+                <button class="edit-button" onclick="edit()">
                     <img src="https://img.icons8.com/material-rounded/24/000000/edit.png" alt="Edit">
                 </button>
             </div>
             <div class="profile">
-                <img id="profile-picture" src="https://via.placeholder.com/100" alt="Profile Picture">
+                <img id="profile-picture" src="imgs/user-icon.png" alt="Profile Picture">
                 <h1 id="profile-name">João</h1>
                 <p id="profile-email">joao@gmail.com</p>
             </div>
             <div class="stats">
                 <div>
-                    <p>Mensagens</p>
+                    <p class="statstext">Mensagens</p>
                     <p>10</p>
                 </div>
                 <div>
-                    <p>Comentários</p>
+                    <p class="statstext">Comentários</p>
                     <p>68</p>
                 </div>
                 <div>
-                    <p>Avaliações</p>
+                    <p class="statstext">Avaliações</p>
                     <p>90</p>
                 </div>
             </div>
             <div class="menu">
-                <div class="menu-item">
-                    <img src="https://img.icons8.com/material-outlined/24/000000/accessibility2.png" alt="Special Needs">
+                <a href="acessibilidade.html" class="menu-item">
+                    <img src="imgs/acessibilidade.png" alt="Necessidade Especial">
                     <p>Necessidade Especial</p>
                     <i class="arrow right"></i>
-                </div>
-                <div class="menu-item">
-                    <img src="https://img.icons8.com/material-outlined/24/000000/like.png" alt="Favorites">
+                </a>
+                <a href="favoritos.html" class="menu-item">
+                    <img src="imgs/greenheart.png" alt="Favoritos">
                     <p>Favoritos</p>
                     <i class="arrow right"></i>
-                </div>
-                <div class="menu-item">
-                    <img src="https://img.icons8.com/material-outlined/24/000000/time-machine.png" alt="History">
+                </a>
+                <a href="historico.html" class="menu-item">
+                    <img src="imgs/history.png" alt="Histórico">
                     <p>Histórico</p>
                     <i class="arrow right"></i>
-                </div>
-                <div class="menu-item">
-                    <img src="https://img.icons8.com/material-outlined/24/000000/settings.png" alt="Settings">
+                </a>
+                <a href="configuracoes.html" class="menu-item">
+                    <img src="imgs/config.png" alt="Configurações">
                     <p>Configurações</p>
                     <i class="arrow right"></i>
-                </div>
-                <div class="menu-item">
-                    <img src="https://img.icons8.com/material-outlined/24/000000/logout-rounded.png" alt="Logout">
+                </a>
+                <div class="menu-item" onclick="logout()">
+                    <img src="imgs/logout.png" alt="Sair">
                     <p>Sair</p>
                     <i class="arrow right"></i>
                 </div>
-            </div>
-        </div>
-
-        <div id="edit-profile-view" class="edit-profile-view" style="display: none;">
-            <div class="header">
-                <button class="back-button" onclick="toggleView('profile-view', 'edit-profile-view')">
-                    <img src="https://img.icons8.com/material-rounded/24/000000/left.png" alt="Back">
-                </button>
-                <h2>Editar Perfil</h2>
-            </div>
-            <div class="edit-profile">
-                <h1>Editar Dados</h1>
-                <input type="file" accept="image/*" id="new-profile-picture" onchange="updateProfilePicture(event)">
-                <input type="text" placeholder="Nome" id="new-name" value="João">
-                <input type="email" placeholder="Email" id="new-email" value="joao@gmail.com">
-                <button onclick="saveChanges()">Salvar</button>
-            </div>
+            </div>            
         </div>
     </div>
-    <script>
-        function toggleView(show, hide) {
-            document.getElementById(show).style.display = 'block';
-            document.getElementById(hide).style.display = 'none';
-        }
-
-        function updateProfilePicture(event) {
-            const reader = new FileReader();
-            reader.onload = function() {
-                const profilePicture = document.getElementById('profile-picture');
-                profilePicture.src = reader.result;
-            };
-            reader.readAsDataURL(event.target.files[0]);
-        }
-
-        function saveChanges() {
-            const newName = document.getElementById('new-name').value;
-            const newEmail = document.getElementById('new-email').value;
-
-            document.getElementById('profile-name').textContent = newName;
-            document.getElementById('profile-email').textContent = newEmail;
-
-            // Here you would typically send the updated data to the server
-            // for persistence, for example using fetch() or AJAX.
-
-            toggleView('profile-view', 'edit-profile-view');
-        }
-    </script>
+    <script src="usuario.js"></script>
 </body>
 </html>

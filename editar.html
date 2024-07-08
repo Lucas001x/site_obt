@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="editar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-button" onclick="goBack()">
+                <img src="https://img.icons8.com/material-rounded/24/000000/left.png" alt="Back">
+            </button>
+            <h2>Perfil</h2>
+        </div>
+        <div class="edit-profile">
+            <div class="profile-picture-container">
+                <img id="current-profile-picture" src="imgs/user-icon.png" alt="Current Profile Picture">
+                <button class="edit-picture-button" onclick="document.getElementById('new-profile-picture').click()">
+                    <img src="https://img.icons8.com/material-rounded/24/000000/edit.png" alt="Editar Foto">
+                </button>
+                <input type="file" accept="image/*" id="new-profile-picture" style="display:none;" onchange="updateProfilePicture(event)">
+            </div>
+            <h1>Editar Dados</h1>
+            <input type="text" placeholder="Nome" id="new-name" value="João">
+            <input type="email" placeholder="Email" id="new-email" value="joao@gmail.com" readonly>
+            <input type="text" placeholder="Endereço" id="new-address" value="Rua Exemplo, 123">
+            <a href="senha.html" class="change-password">Redefinir Senha</a>
+            <div class="salvar" onclick="saveChanges()">Salvar</div>
+        </div>
+    </div>
+    <script src="editar.js"></script>
+</body>
+</html>

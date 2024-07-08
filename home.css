@@ -15,7 +15,7 @@ body {
 }
 
 .profile-bg {
-  background-color: #3c2d48;
+  background-color: none;
   padding: 0.5rem;
   border-radius: 0.875rem;
   display: flex;
@@ -35,7 +35,7 @@ body {
 }
 
 .header h4 {
-  color: #77ffc0;
+  color: #ffffff;
   font-size: 1.25rem;
 }
 
