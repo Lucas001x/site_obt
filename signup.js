@@ -33,6 +33,6 @@ function signup() {
     }
   
     if (isValid) {
-      window.location.href = 'login.html';
+      window.location.href = 'acessibilidade.html';
     }
   }  

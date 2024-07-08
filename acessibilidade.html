@@ -4,49 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Necessidade Especial</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="acessibilidade.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
 </head>
 <body>
-  <header class="header d-flex justify-content-between align-items-center p-3">
-    <a class="nav-link" href="usuario.html">
-      <div class="profile-bg">
-        <img src="imgs/user-icon.png" alt="Profile Picture" class="profile-pic">
-        <h4 class="nome">João</h4>
-      </div>
-    </a>
-    <div></div>
-  </header>
-
-  <div class="locations-section p-3">
-    <h5>Necessidade Especial</h5>
-    <p>Detalhes sobre as necessidades especiais aqui.</p>
-  </div>
-
-  <nav class="navbar fixed-bottom navbar-light">
-    <div class="container-fluid d-flex justify-content-around">
-      <a class="nav-link" href="home.html">
-        <img src="imgs/home-icon.png" alt="Home" class="nav-icon">
-        <div>Home</div>
-      </a>
-      <a class="nav-link" href="#">
-        <img src="imgs/map-icon.png" alt="Map" class="nav-icon">
-        <div>Mapa</div>
-      </a>
-      <a class="nav-link" href="pesquisar.html">
-        <img src="imgs/search-icon.png" alt="Search" class="nav-icon">
-        <div>Pesquisar</div>
-      </a>
-      <a class="nav-link" href="usuario.html">
-        <img src="imgs/user-icon.png" alt="User" class="nav-icon">
-        <div>Usuário</div>
-      </a>
+  <div class="container">
+    <div class="header">
+      <button class="back-button" onclick="goBack()">
+        <img src="https://img.icons8.com/material-rounded/24/000000/left.png" alt="Back">
+      </button>
+      <h2>Nos conte sobre você</h2>
     </div>
-  </nav>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="special-needs">
+      <p>Nos diga mais sobre você e suas condições</p>
+      <div class="needs-options">
+        <div class="need-option">
+          <input type="checkbox" id="locomotion" class="switch">
+          <label for="locomotion">Dificuldade de locomoção</label>
+        </div>
+        <div class="need-option">
+          <input type="checkbox" id="visual" class="switch">
+          <label for="visual">Deficiência(s) visual(is)</label>
+        </div>
+        <div class="need-option">
+          <input type="checkbox" id="auditory" class="switch">
+          <label for="auditory">Deficiência(s) auditiva(s)</label>
+        </div>
+        <div class="need-option">
+          <input type="checkbox" id="sensory" class="switch">
+          <label for="sensory">Sensibilidade Sensorial</label>
+        </div>
+        <div class="need-option">
+          <input type="checkbox" id="speech" class="switch">
+          <label for="speech">Deficiência de Fala ou de Linguagem</label>
+        </div>
+        <div class="need-option">
+          <input type="checkbox" id="cognitive" class="switch">
+          <label for="cognitive">Deficiência Cognitiva</label>
+        </div>
+        <div class="need-option">
+          <input type="checkbox" id="intellectual" class="switch">
+          <label for="intellectual">Deficiência Intelectual</label>
+        </div>
+        <div class="need-option">
+          <input type="checkbox" id="mental" class="switch">
+          <label for="mental">Deficiência Psicossocial ou Mental</label>
+        </div>
+      </div>
+      <button class="save-button" onclick="saveNeeds()">Salvar</button>
+    </div>
+  </div>
   <script src="acessibilidade.js"></script>
 </body>
 </html>
