@@ -27,6 +27,7 @@ function saveChanges() {
             localStorage.setItem('profilePicture', reader.result);
             window.location.href = 'usuario.html';
         };
+
         reader.readAsDataURL(newProfilePicture);
     } else {
         window.location.href = 'usuario.html';
