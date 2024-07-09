@@ -71,7 +71,10 @@ body {
 }
 
 .locations-section .card-title {
-  color: #ffffff; 
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .locations-section .card-text {
