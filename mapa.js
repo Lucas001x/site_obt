@@ -9,17 +9,13 @@ L.marker([-20.3155, -40.3128]).addTo(map)
     .openPopup();
 
 function home() {
-    alert('Início');
-}
-
-function map() {
-    alert('Mapa');
+    window.location.href = 'home.html';
 }
 
 function messages() {
-    alert('Mensagens');
+    window.location.href = 'home.html';
 }
 
 function profile() {
-    alert('Perfil');
+    window.location.href = 'usuario.html';
 }
