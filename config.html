@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="config.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Configurações</h1>
+
+        <div class="configuracao">
+            <label for="idioma" id="idioma-label">Idioma:</label>
+            <select id="idioma">
+                <option value="pt-BR">Português (Brasil)</option>
+                <option value="en-US">English (United States)</option>
+                <option value="es-ES">Español (España)</option>
+            </select>
+        </div>
+
+        <div class="configuracao">
+            <label for="fonte" id="fonte-label">Fonte:</label>
+            <select id="fonte">
+                <option value="sans-serif">Sans Serif</option>
+                <option value="bold">Negrito</option>
+            </select>
+        </div>
+
+        <div class="configuracao">
+            <label for="notificacoes" id="notificacoes-label">Gerenciar Notificações:</label>
+            <input type="checkbox" id="notificacoes" checked>
+        </div>
+
+        <div class="configuracao">
+            <label for="dados-moveis" id="dados-moveis-label">Uso de Dados Móveis:</label>
+            <input type="checkbox" id="dados-moveis" checked>
+        </div>
+
+        <div class="configuracao">
+            <button id="privacidade">Ver Política de Privacidade</button>
+        </div>
+
+        <div class="configuracao">
+            <button id="suporte">Entrar em Contato com o Suporte</button>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+</body>
+</html>
