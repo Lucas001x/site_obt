@@ -14,7 +14,7 @@ function login() {
   }
 
   if (password.length < 8) {
-    document.getElementById('password-erro').textContent = 'A senha deve ter pelo menos 8 caracteres.';
+    document.getElementById('password-erro').textContent = 'A senha está incorreta.';
     isValid = false;
   }
 
