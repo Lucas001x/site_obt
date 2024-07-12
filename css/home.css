@@ -85,6 +85,10 @@ body {
   max-width: 70%;
   padding-left: 50px;
 }
+.carousel-item-right {
+  max-width: 70%;
+  padding-right: 50px;
+}
 
 .card img {
   object-fit: cover;

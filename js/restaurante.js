@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   heartIcon.addEventListener('click', function() {
     if (heartIcon.src.includes('imgs/blankheart.png')) {
-      heartIcon.src = 'imgs/redheart.png';
+      heartIcon.src = '../assets/imgs/redheart.png';
       heartIcon.classList.add('pulse');
       setTimeout(() => heartIcon.classList.remove('pulse'), 1000);
       addToFavorites(restaurant);
     } else {
-      heartIcon.src = 'imgs/blankheart.png';
+      heartIcon.src = '../assets/imgs/blankheart.png';
       removeFromFavorites(restaurant);
     }
   });
@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   document.getElementById('comentariosBtn').addEventListener('click', function() {
-    alert('Aqui você pode ver os comentários sobre o restaurante.');
+
   });
 
   document.getElementById('saberMaisBtn').addEventListener('click', function() {
-    alert('Aqui você pode saber mais sobre o restaurante.');
+
   });
 });
 
