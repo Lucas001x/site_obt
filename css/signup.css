@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.main-signup {
+  width: 100vw;
+  height: 100vh;
+  background: #201b2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.card-signup {
+  width: 60%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 35px;
+  background: #2f2841;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+  min-height: 300px;
+  overflow: auto;
+}
+
+.card-signup > h1 {
+  color: #77ffc0;
+  font-weight: 800;
+  margin: 0;
+}
+
+.textfield-signup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.textfield-signup > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #514869;
+  color: #f0ffffde;
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.textfield-signup > label {
+  color: #f0ffffde;
+  margin-bottom: 10px;
+}
+
+.textfield-signup > input::placeholder {
+  color: #f0ffff94;
+}
+
+.textfield-signup > .error-message {
+  color: #ff4d4d;
+  font-size: 10pt;
+  margin-top: 5px;
+}
+
+.btn-signup {
+  width: 100%;
+  padding: 16px 0;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #f0ffffde;
+  background: #49405f;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #00000056;
+}
+
+.btn-signup:hover {
+  background-color: #77ffc0; 
+}
+
+.alt-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.alt-links span {
+  color: #f0ffffde;
+  margin: 5px 0;
+}
+
+.alt-links a {
+  color: #77ffc0;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.alt-links a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 950px) {
+  .card-signup {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-signup {
+    width: 90%;
+  }
+}
+
+.bnts {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.left-signup-image {
+  width: 100vw;
+  height: auto;
+  max-height: 50vh; 
+  object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
