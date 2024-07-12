@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #201b2c;
+    color: #77ffc0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #514869;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+}
+
+.header p {
+    font-size: 0.9em;
+    color: #77ffc0;
+}
+
+.ratings {
+    margin-top: 20px;
+}
+
+.rating {
+    margin-bottom: 15px;
+}
+
+.rating label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+.star.selected {
+    color: #ffda44;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.save, .clear {
+    background-color: #1e6f4b;
+    color: #77ffc0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save:hover, .clear:hover {
+    background-color: #155137;
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.2em;
+    }
+
+    .rating label {
+        font-size: 1em;
+    }
+
+    .star {
+        font-size: 1.3em;
+    }
+
+    .save, .clear {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
