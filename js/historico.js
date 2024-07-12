@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-4');
             card.innerHTML = `
                 <div class="card">
-                    <img src="${restaurant.imgSrc}" class="card-img-top" alt="${restaurant.name}">
+                    <img src="${restaurant.image}" class="card-img-top" alt="${restaurant.name}">
                     <div class="card-body">
                         <h5 class="card-title">${restaurant.name}</h5>
                         <div class="restaurant-info">
@@ -26,5 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function goBack() {
-    window.location.href = '../pages/usuario.html';
+    window.location.href = 'usuario.html';
 }

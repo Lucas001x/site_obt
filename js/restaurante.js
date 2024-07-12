@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   heartIcon.addEventListener('click', function() {
-    if (heartIcon.src.includes('imgs/blankheart.png')) {
+    if (heartIcon.src.includes('../assets/imgs/blankheart.png')) {
       heartIcon.src = '../assets/imgs/redheart.png';
       heartIcon.classList.add('pulse');
       setTimeout(() => heartIcon.classList.remove('pulse'), 1000);
