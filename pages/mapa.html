@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="../css/mapa.css">
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" placeholder="Pesquise por nomes e endereços">
+    </div>
+    <div id="map"></div>
+    <nav class="navbar fixed-bottom navbar-light">
+        <div class="container-fluid d-flex justify-content-around">
+          <a class="nav-link" href="../pages/home.html">
+            <div class="nav-icon-container">
+                <img src="../assets/imgs/home-icon.png" alt="Home" class="nav-icon">
+                <div>Home</div>
+            </div>
+          </a>
+          <a class="nav-link" href="#">
+            <div class="nav-icon-container">
+                <img src="../assets/imgs/map-icon.png" alt="Map" class="nav-icon">
+                <div>Mapa</div>
+            </div>
+          </a>
+          <a class="nav-link" href="pesquisar.html">
+            <div class="nav-icon-container">
+                <img src="../assets/imgs/search-icon.png" alt="Search" class="nav-icon">
+                <div>Pesquisar</div>
+            </div>
+          </a>
+          <a class="nav-link" href="usuario.html">
+            <div class="nav-icon-container">
+                <img src="../assets/imgs/user-icon.png" alt="User" class="nav-icon">
+                <div>Usuário</div>
+            </div>
+          </a>
+        </div>
+      </nav>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../js/mapa.js"></script>
+</body>
+</html>

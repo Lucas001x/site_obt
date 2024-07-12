@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/signup.css">
+  <title>Cadastrar-se</title>
+</head>
+<body>
+  <div class="main-signup">
+    <div class="card-signup">
+      <h1>CADASTRO</h1>
+      <div class="textfield-signup">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome">
+        <div class="error-message" id="nome-erro"></div> 
+      </div>
+      <div class="textfield-signup">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email">
+        <div class="error-message" id="email-erro"></div> 
+      </div>
+      <div class="textfield-signup">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Senha">
+        <div class="error-message" id="senha-erro"></div> 
+      </div>
+      <div class="textfield-signup">
+        <label for="confirmar-senha">Confirmar Senha</label>
+        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar Senha">
+        <div class="error-message" id="confirmar-senha-erro"></div> 
+      </div>
+      <div class="bnts">
+        <button class="btn-signup" onclick="signup()">Registrar</button>
+      </div>
+      <div class="alt-links">
+        <span>Já possui uma conta? <a href="../pages/login.html">Entrar</a></span>
+      </div>
+    </div>
+  </div>
+  <script src="../js/signup.js"></script>
+</body>
+</html>
