@@ -12,13 +12,34 @@
         <input type="text" placeholder="Pesquise por nomes e endereços">
     </div>
     <div id="map"></div>
-    <div class="navbar">
-        <button onclick="home()">Início</button>
-        <button> Mapa</button>
-        <button onclick="messages()">Mensagens</button>
-        <button onclick="profile()">Perfil</button>
-    </div>
-
+    <nav class="navbar fixed-bottom navbar-light">
+        <div class="container-fluid d-flex justify-content-around">
+          <a class="nav-link" href="#">
+            <div class="nav-icon-container">
+                <img src="imgs/home-icon.png" alt="Home" class="nav-icon">
+                <div>Home</div>
+            </div>
+          </a>
+          <a class="nav-link" href="mapa.html">
+            <div class="nav-icon-container">
+                <img src="imgs/map-icon.png" alt="Map" class="nav-icon">
+                <div>Mapa</div>
+            </div>
+          </a>
+          <a class="nav-link" href="pesquisar.html">
+            <div class="nav-icon-container">
+                <img src="imgs/search-icon.png" alt="Search" class="nav-icon">
+                <div>Pesquisar</div>
+            </div>
+          </a>
+          <a class="nav-link" href="usuario.html">
+            <div class="nav-icon-container">
+                <img src="imgs/user-icon.png" alt="User" class="nav-icon">
+                <div>Usuário</div>
+            </div>
+          </a>
+        </div>
+      </nav>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="mapa.js"></script>
 </body>
