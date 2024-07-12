@@ -12,8 +12,8 @@ body, html {
 .search-bar {
     display: flex;
     justify-content: center;
-    padding: 10px;
-    background-color: #f0f0f0;
+    padding: 1%;
+    background-color: #1F1B2C;
     border-bottom: 1px solid #ccc;
 }
 
@@ -21,7 +21,7 @@ body, html {
     width: 80%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #1F1B2C;
     border-radius: 5px;
 }
 
@@ -29,24 +29,30 @@ body, html {
     height: 60px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     background-color: #1F1B2C;
     border-top: 1px solid #ccc;
     position: fixed;
     bottom: 0;
     width: 100%;
+    padding: 1%;
 }
 
-.navbar button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px;
-    flex-grow: 1;
+.navbar .nav-link {
+    padding: 0.5rem;
+    display: flex;
 }
 
-.navbar button:focus {
-    outline: none;
+.navbar .nav-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.5rem;
+}
+
+.navbar {
+    border-radius: 1rem 1rem 0 0;
+    padding: 0 1rem;
+}
+
+.nav-link div {
+    font-size: 0.875rem;
 }
