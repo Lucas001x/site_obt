@@ -22,4 +22,16 @@ $(document).ready(function() {
 
   $('.nome').text(profileName);
   $('.profile-pic').attr('src', profilePicture);
+
+  $('.restaurant-card').click(function() {
+    const restaurant = {
+      name: $(this).data('name'),
+      location: $(this).data('location'),
+      rating: $(this).data('rating'),
+      image: $(this).data('image')
+    };
+
+    localStorage.setItem('restaurant', JSON.stringify(restaurant));
+    window.location.href = '../pages/restaurante.html';
+  });
 });
