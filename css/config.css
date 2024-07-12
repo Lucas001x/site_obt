@@ -1,37 +1,47 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #03a678;
-    color: white;
-}
-
+    background-color: #2f2841;
+  color: #03a678;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  }
+  
 .container {
-    max-width: 90%;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: black;
+    background-color: #49405f;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  }
+
+.image-container{
+    text-align: center;
+    
 }
+  
 
 h1 {
     text-align: center;
 }
 
 .configuracao {
-    margin-bottom: 20px;
+    margin-bottom: 3%;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 5%;
 }
 
 select, input[type="checkbox"], button {
     width: 100%;
-    padding: 10px;
+    padding: 1%;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -48,7 +58,7 @@ button {
 
 @media (max-width: 600px) {
     body {
-        padding: 10px;
+        padding: 1%;
     }
 
     .container {
@@ -56,6 +66,6 @@ button {
     }
 
     select, input[type="checkbox"], button {
-        padding: 8px;
+        padding: 0.8%;
     }
 }

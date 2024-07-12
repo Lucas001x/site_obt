@@ -35,3 +35,19 @@ $(document).ready(function() {
     window.location.href = '../pages/restaurante.html';
   });
 });
+
+  $('.restaurant-card').click(function() {
+      const restaurant = {
+        name: $(this).data('name'),
+        location: $(this).data('location'),
+        rating: $(this).data('rating'),
+        image: $(this).data('image')
+      };
+
+      let history = JSON.parse(localStorage.getItem('restaurantHistory')) || [];
+      history.unshift(restaurant);
+      localStorage.setItem('restaurantHistory', JSON.stringify(history));
+
+      localStorage.setItem('restaurant', JSON.stringify(restaurant));
+      window.location.href = 'restaurante.html';
+    });

@@ -9,7 +9,9 @@
 <body>
     <div class="container">
         <h1 id="titulo">Configurações</h1>
-
+        <div class="image-container">
+            <img src="../assets/imgs/engrenagem.png" alt="engrenagem" height="95px">          
+          </div>
         <div class="configuracao">
             <label for="idioma" id="idioma-label">Idioma:</label>
             <select id="idioma">
@@ -29,23 +31,29 @@
 
         <div class="configuracao">
             <label for="notificacoes" id="notificacoes-label">Gerenciar Notificações:</label>
-            <input type="checkbox" id="notificacoes" checked>
+            <select name="notificacoes" id="notificacoes"> 
+                <option value="Receber">Receber Notificações</option>
+                <option value="NReceber">Não Receber Notificações</option>
+                <option value="Desativar">Desativar as notificações por 8 horas</option>
+            </select>
         </div>
 
         <div class="configuracao">
             <label for="dados-moveis" id="dados-moveis-label">Uso de Dados Móveis:</label>
-            <input type="checkbox" id="dados-moveis" checked>
+            <select name="config" id="config"> 
+                <option value="Utilizar">Utilizar Dados Móveis</option>
+                <option value="NUtilizar">Não Utilizar Dados Móveis</option>
+            </select>
         </div>
 
         <div class="configuracao">
-            <button id="privacidade">Ver Política de Privacidade</button>
+            <a href="#"><button id="privacidade">Ver Política de Privacidade</button></a>
         </div>
 
         <div class="configuracao">
-            <button id="suporte">Entrar em Contato com o Suporte</button>
+           <a href="#"><button id="suporte">Voltar a tela de inicio</button></a>
         </div>
     </div>
-
     <script src="../js/config.js"></script>
 </body>
 </html>
