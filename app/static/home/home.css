@@ -1,0 +1,178 @@
+body {
+  background-color: #2f2841;
+  color: #f0ffff; 
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #201b2c;
+  padding: 0.75rem;
+}
+
+.profile-bg {
+  background-color: none;
+  padding: 0.5rem;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+}
+
+.nome {
+  color: #77ffc0;
+  font-size: 1.25rem;
+  padding-left: 0.5rem;
+}
+
+.header h4 {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.locations-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Container de Cards */
+.locations-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Espaço entre os cards */
+}
+
+/* Cards */
+.locations-section .card {
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 18rem; /* Largura máxima */
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #49405f;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+/* Imagem do card */
+.locations-section .card img {
+  object-fit: cover;
+  height: 9.375rem; /* Ajuste conforme necessário */
+  width: 100%;
+}
+
+/* Corpo do card */
+.locations-section .card-body {
+  padding: 1rem;
+}
+
+/* Hover effect */
+.locations-section .card:hover {
+  transform: scale(1.05);
+}
+
+/* Título e texto do card */
+.locations-section .card-title {
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.locations-section .card-text {
+  color: #D8F3DC;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h4 {
+    margin-top: 10px;
+  }
+
+  .navbar .nav-link {
+    padding: 0.5rem;
+  }
+
+  .navbar .nav-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .navbar {
+    border-radius: 2rem 2rem 0 0;
+    padding: 0 1rem;
+  }
+
+  .nav-link div {
+    font-size: 0.875rem;
+  }
+
+  .locations-section .card {
+    max-width: 100%; /* Ajusta a largura para ocupar 100% em telas pequenas */
+  }
+
+  .locations-section .card img {
+    height: 6rem; /* Ajuste da altura da imagem para telas menores */
+  }
+}
+
+.navbar {
+  background-color: #201b2c;
+  border-radius: 3.75rem 3.75rem 0 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+
+.nav-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.nav-link {
+  color: #77ffc0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.75rem 0;
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #77ffc0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(1);
+}
+
+.container-corpo {
+  padding-bottom: 5rem;
+}
+
+.nav-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -5,7 +5,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker([-20.3155, -40.3128]).addTo(map)
-    .bindPopup('Exemplo de marcador.')
+    .bindPopup('Base IncluRate.')
     .openPopup();
 
 function home() {

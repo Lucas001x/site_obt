@@ -1,4 +1,7 @@
-function login() {
+// login.js
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita o envio do formulário até validar
+
   document.getElementById('usuario-erro').textContent = '';
   document.getElementById('password-erro').textContent = '';
 
@@ -14,11 +17,11 @@ function login() {
   }
 
   if (password.length < 8) {
-    document.getElementById('password-erro').textContent = 'A senha está incorreta.';
+    document.getElementById('password-erro').textContent = 'A senha deve ter pelo menos 8 caracteres.';
     isValid = false;
   }
 
   if (isValid) {
-    window.location.href = '../pages/home.html';
+    this.submit(); // Envia o formulário se todas as validações estiverem corretas
   }
-}
+});

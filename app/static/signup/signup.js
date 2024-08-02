@@ -1,4 +1,7 @@
-function signup() {
+// signup.js
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio do formulário até validar
+  
     document.getElementById('nome-erro').textContent = '';
     document.getElementById('email-erro').textContent = '';
     document.getElementById('senha-erro').textContent = '';
@@ -12,27 +15,28 @@ function signup() {
     let isValid = true;
   
     if (nome === '') {
-      document.getElementById('nome-erro').textContent = 'O nome é obrigatório.';
-      isValid = false;
+        document.getElementById('nome-erro').textContent = 'O nome é obrigatório.';
+        isValid = false;
     }
   
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === '' || !emailPattern.test(email)) {
-      document.getElementById('email-erro').textContent = 'Digite um email válido no formato email@tipo.com.';
-      isValid = false;
+        document.getElementById('email-erro').textContent = 'Digite um email válido no formato email@tipo.com.';
+        isValid = false;
     }
   
     if (senha.length < 8) {
-      document.getElementById('senha-erro').textContent = 'A senha deve ter pelo menos 8 caracteres.';
-      isValid = false;
+        document.getElementById('senha-erro').textContent = 'A senha deve ter pelo menos 8 caracteres.';
+        isValid = false;
     }
   
     if (senha !== confirmarSenha) {
-      document.getElementById('confirmar-senha-erro').textContent = 'As senhas não coincidem.';
-      isValid = false;
+        document.getElementById('confirmar-senha-erro').textContent = 'As senhas não coincidem.';
+        isValid = false;
     }
   
     if (isValid) {
-      window.location.href = '../pages/acessibilidade.html';
+      this.submit(); // Envia o formulário se todas as validações estiverem corretas
     }
-  }  
+  });
+  
