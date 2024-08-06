@@ -15,7 +15,7 @@ function showSlide(index) {
 
 nextSlideBtn.addEventListener('click', () => {
     if (currentSlide === slides.length - 1) {
-        window.location.href = 'login/login.html';
+        window.location.href = 'templates/login.html';
     } else {
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
@@ -23,7 +23,7 @@ nextSlideBtn.addEventListener('click', () => {
 });
 
 skipBtn.addEventListener('click', () => {
-    window.location.href = 'login/login.html';
+    window.location.href = 'templates/login.html';
 });
 
 showSlide(currentSlide);
@@ -51,7 +51,7 @@ function handleTouchMove(event) {
 
 function nextSlide() {
     if (currentSlide === slides.length - 1) {
-        window.location.href = 'login/login.html';
+        window.location.href = 'templates/login.html';
     } else {
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
