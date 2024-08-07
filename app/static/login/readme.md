@@ -1,1 +1,0 @@
-lembrar de trocar os caminhos de todos os outros scripts
