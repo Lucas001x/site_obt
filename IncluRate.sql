@@ -23,9 +23,9 @@ DROP TABLE IF EXISTS `deficiencia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `deficiencia` (
-  `tipo` int NOT NULL,
+  `codigo` int NOT NULL AUTO_INCREMENT,
   `deficiencia` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`tipo`)
+  PRIMARY KEY (`codigo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -35,7 +35,6 @@ CREATE TABLE `deficiencia` (
 
 LOCK TABLES `deficiencia` WRITE;
 /*!40000 ALTER TABLE `deficiencia` DISABLE KEYS */;
-INSERT INTO `deficiencia` VALUES (1,'Dificuldade de locomoção'),(2,'Deficiência visual'),(3,'Deficiência auditiva'),(4,'Sensibilidade Sensorial'),(5,'Deficiência de Fala'),(6,'Deficiência Cognitiva'),(7,'Deficiência Intelectual'),(8,'Deficiência Psicossocial');
 /*!40000 ALTER TABLE `deficiencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -98,4 +97,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-08 14:36:11
+-- Dump completed on 2024-08-08 13:55:58

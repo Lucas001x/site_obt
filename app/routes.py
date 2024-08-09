@@ -11,12 +11,12 @@ def index():
 @app.route('/templates/signup.html', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        nome = request.form['nome']
+        nome_user = request.form['nome']
         email = request.form['email']
         senha = request.form['senha']
         idade = 10
 
-        return redirect(url_for('acessibilidade'), nome=nome, email=email, idade=idade)
+        return acessibilidade(nome=nome_user, email=email, idade=idade, senha=senha) 
 
     return render_template('signup.html')
 
@@ -34,20 +34,21 @@ mapa_deficiencias = {
 }
 
 @app.route('/templates/acessibilidade.html', methods=['GET', 'POST'])
-def acessibilidade(nome, email, senha, idade):  
+def acessibilidade():  
+
     nome = request.args.get('nome')
     email = request.args.get('email')
     senha = request.args.get('senha')
     idade = request.args.get('idade')
 
-    if request.method == 'POST':
+    print(nome, email, senha, idade, "\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
-        deficiencias_selecionadas = request.form.getlist('deficiencia')  # Captura a lista de deficiências selecionadas
-        valores_deficiencias = [mapa_deficiencias[deficiencia] for deficiencia in deficiencias_selecionadas]
+    if request.method == 'POST':
+        deficiencias_selecionadas = request.form.getlist('deficiencia')
+        valores_deficiencias = Deficiencia.query.filter(Deficiencia.tipo.in_(deficiencias_selecionadas)).all()
 
         # Armazenamento no banco de dados
-        
-        novo_usuario = User(nome=nome, email=email, idade=idade, deficiencia=valores_deficiencias)
+        novo_usuario = User(nome=nome, email=email, idade=idade, deficiencias=valores_deficiencias)
         db.session.add(novo_usuario)
         db.session.commit()
 
@@ -56,8 +57,12 @@ def acessibilidade(nome, email, senha, idade):
         db.session.commit()
 
         flash('Conta criada com sucesso!', 'success')
+        
+        return render_template('home.html')
 
-    return render_template('acessibilidade.html')
+    return render_template('acessibilidade.html', nome=nome, email=email, idade=idade, senha=senha)
+
+
 
 # ------------------------------------------------------------------------- login -------------------------------------------------------------------------
 
