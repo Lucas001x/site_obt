@@ -49,12 +49,16 @@ def acessibilidade():
 
     if request.method == 'POST':
         deficiencias_selecionadas = request.form.getlist('deficiencia')
-        valores_deficiencias = Deficiencia.query.filter(Deficiencia.tipo.in_(deficiencias_selecionadas)).all()# erro ta aqui 
+        valores_selecionados = [mapa_deficiencias[deficiencia] for deficiencia in deficiencias_selecionadas]
+
+        # Buscar as instâncias de Deficiencia correspondentes aos valores_selecionados
+        deficiencias_objs = Deficiencia.query.filter(Deficiencia.tipo.in_(valores_selecionados)).all()
+
+        print(deficiencias_objs, "\n\n\n\n\n\n\n\n\n\n\n")
 
 
-        print(deficiencias_selecionadas)
         # Armazenamento no banco de dados
-        novo_usuario = User(nome=nome, email=email, idade=idade, deficiencias=valores_deficiencias)
+        novo_usuario = User(nome=nome, email=email, idade=idade, deficiencias= deficiencias_objs)
         db.session.add(novo_usuario)
         db.session.commit()
 

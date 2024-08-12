@@ -10,7 +10,7 @@ user_deficiencia_association = db.Table('user_deficiencia',
 class Deficiencia(db.Model):
     __tablename__ = 'deficiencia'
     tipo = db.Column(db.Integer, primary_key=True)  # Mantendo 'tipo' como chave primária
-    deficiencia = db.Column(db.String(100))
+    deficiencia = db.Column(db.String(35))
     users = db.relationship('User', secondary=user_deficiencia_association, back_populates='deficiencias')
 
 class Senha(db.Model):
