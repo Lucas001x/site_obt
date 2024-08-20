@@ -4,7 +4,7 @@ from app import db
 # Tabela de associação
 user_deficiencia_association = db.Table('user_deficiencia',
     db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
-    db.Column('deficiencia_tipo', db.Integer, db.ForeignKey('deficiencia.tipo'))  # Alterado para referenciar 'tipo'
+    db.Column('deficiencia_tipo', db.Integer, db.ForeignKey('deficiencia.tipo'))  
 )
 
 class Deficiencia(db.Model):
