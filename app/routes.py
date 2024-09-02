@@ -79,6 +79,7 @@ def acessibilidade():
 @app.route('/templates/login.html', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
+        
         email = request.form['email']
         senha = request.form['senha']
 
@@ -87,7 +88,7 @@ def login():
             user_senha = Senha.query.filter_by(id=user.id, senha=senha).first()
             if user_senha:
                 flash('Login realizado com sucesso!', 'success')
-                return redirect(url_for('index'))
+                return render_template('home.html')
             else:
                 flash('Senha incorreta.', 'danger')
         else:
